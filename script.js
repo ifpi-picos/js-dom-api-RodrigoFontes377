@@ -3,31 +3,44 @@ const listContainer = document.getElementById("list-tarefa");
 function addTarefa() {
   const inputNome = document.getElementById("input-nome");
   const inputDescricao = document.getElementById("input-descricao");
-  const inputDatetime = document.getElementById("datetime");
+  const inputData = document.getElementById("input-data");
+  const inputHora = document.getElementById("input-hora");
 
   const nome = inputNome.value;
   const descricao = inputDescricao.value;
-  const datetime = inputDatetime.value;
+  const data = inputData.value;
+  const hora = inputHora.value;
 
-  if (nome.trim() === "" || descricao.trim() === "" || datetime.trim() === "") {
+  if (
+    nome.trim() === "" ||
+    descricao.trim() === "" ||
+    data.trim() === "" ||
+    hora.trim() === ""
+  ) {
     alert("Por favor, preencha todos os campos.");
     return;
   }
 
   const novaTarefa = document.createElement("li");
-  novaTarefa.innerHTML = `<strong>${nome}</strong>: ${descricao} - ${datetime}`;
+  novaTarefa.innerHTML = `<strong>${nome}</strong>: ${descricao} - ${data} - ${hora}`;
 
-  const span = document.createElement("span");
-  span.textContent = "\u00d7";
-  span.style.float = "right";
-  span.style.cursor = "pointer";
-  novaTarefa.appendChild(span);
+  const icon = document.createElement("img");
+  icon.src = "img/trash-bin.png";
+  icon.alt = "Remover";
+  icon.style.float = "right";
+  icon.style.cursor = "pointer";
+  icon.addEventListener("click", () => {
+    novaTarefa.remove();
+    saveData();
+  });
 
+  novaTarefa.appendChild(icon);
   listContainer.appendChild(novaTarefa);
 
   inputNome.value = "";
   inputDescricao.value = "";
-  inputDatetime.value = "";
+  inputData.value = "";
+  inputHora.value = "";
 
   saveData();
 }
@@ -36,7 +49,7 @@ listContainer.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
     saveData();
-  } else if (e.target.tagName === "SPAN") {
+  } else if (e.target.tagName === "IMG") {
     e.target.parentElement.remove();
     saveData();
   }
