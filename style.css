@@ -86,3 +86,25 @@ ul li {
   position: relative;
   margin-block: 10px;
 }
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: url(img/dry-clean.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  background: #3c528b;
+  color: #fff;
+  border-radius: 50px;
+}
+
+ul li.checked::before {
+  background: url(img/check.png);
+  background-size: cover;
+}
