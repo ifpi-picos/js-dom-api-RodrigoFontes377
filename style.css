@@ -75,3 +75,14 @@ button {
   margin: auto;
   display: block;
 }
+ul li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  margin-block: 10px;
+}
