@@ -10,7 +10,31 @@
 
   <body>
     <div class="container">
-      <div class="tarefas"></div>
+      <div class="tarefas">
+        <h2>To-Do List <img src="img/pencil.png" /></h2>
+        <div class="row">
+          <input
+            type="text"
+            name=""
+            id="input-box"
+            placeholder="Nome da Tarefa..."
+          />
+        </div>
+        <div class="row">
+          <input
+            type="text"
+            name=""
+            id="input-box"
+            placeholder="Descrição..."
+          />
+        </div>
+        <div class="row">
+          <input type="datetime-local" id="datetime" placeholder="dd/mm/aa" />
+        </div>
+        <div class="button">
+          <button onclick="addTarefa()">Adicionar</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

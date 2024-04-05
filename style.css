@@ -4,12 +4,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
+.container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to top, #cad5d9, #a1aaca);
+  background: linear-gradient(to top, #ededed 0%, #c8cee5 100%);
   padding: 10px;
 }
+
 .tarefas {
   width: 100%;
   max-width: 540px;
@@ -19,4 +20,58 @@ body {
   border-radius: 50px;
 
   box-shadow: 0px 0px 30px #afafaf;
+}
+h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  font-size: 30px;
+  position: relative;
+}
+
+.tarefas h2 img {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  margin-left: 20px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: none;
+  outline: 3px groove #9d9999;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.row input::placeholder {
+  color: #1e008d;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 5px 30px;
+
+  background: #3c528b;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: auto;
+  display: block;
 }
