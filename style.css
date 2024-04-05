@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to top, #cad5d9, #a1aaca);
+  padding: 10px;
+}
+.tarefas {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 150px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 50px;
+
+  box-shadow: 0px 0px 30px #afafaf;
+}
