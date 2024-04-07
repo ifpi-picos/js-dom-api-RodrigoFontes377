@@ -6,6 +6,7 @@
     <title>TO-DO List</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="api.js" defer></script>
   </head>
 
   <body>
@@ -34,12 +35,31 @@
         <div class="row">
           <input type="time" id="input-hora" placeholder="Hora" />
         </div>
-        
+
         <div class="button">
           <button onclick="addTarefa()">Adicionar</button>
         </div>
         <ul id="list-tarefa"></ul>
       </div>
+    </div>
+
+    <div class="container">
+      <h1>Buscar Repositórios GitHub</h1>
+      <div class="tarefas-git">
+        <div class="row">
+          <input
+            type="text"
+            name=""
+            id="input-git"
+            placeholder="Sua Conta Github"
+          />
+        </div>
+        <div class="button">
+          <button id="buscar-btn">Buscar</button>
+        </div>
+      </div>
+
+      <div id="resultado" class="resultado-container"></div>
     </div>
   </body>
 </html>
