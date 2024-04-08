@@ -10,6 +10,12 @@
   background: linear-gradient(to top, #ededed 0%, #c8cee5 100%);
   padding: 10px;
 }
+.container-git {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ededed 0%, #c8cee5 100%);
+  padding: 10px;
+}
 
 .tarefas {
   width: 100%;
@@ -30,7 +36,7 @@
   border-radius: 50px;
   box-shadow: 0px 0px 30px #afafaf;
 }
-.container h1 {
+.container-git h1 {
   text-align: center;
   font-size: 40px;
   font-weight: 60;
@@ -91,7 +97,7 @@ button {
   margin: auto;
   display: block;
 }
-ul li {
+.lista li {
   list-style: none;
   font-size: 18px;
   font-weight: 500;
@@ -102,7 +108,7 @@ ul li {
   position: relative;
   margin-block: 10px;
 }
-ul li::before {
+.lista li::before {
   content: "";
   position: absolute;
   height: 20px;
@@ -141,4 +147,33 @@ ul li.checked span {
 ul li.checked span:hover {
   background: #fff;
   color: #000;
+}
+.lista-repos-dinamica {
+  /* Estilos para a lista de repositórios criada dinamicamente */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista-repos-dinamica li {
+  /* Estilos para os itens da lista */
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista-repos-dinamica li a {
+  /* Estilos para os links dentro dos itens da lista */
+  text-decoration: none;
+  color: #333;
+}
+
+.lista-repos-dinamica li a:hover {
+  /* Estilos para o hover nos links */
+  text-decoration: underline;
 }
